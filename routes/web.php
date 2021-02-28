@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// フォルダ一覧表示機能
+Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
