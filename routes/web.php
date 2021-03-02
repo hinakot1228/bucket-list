@@ -18,4 +18,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // フォルダ一覧表示機能
-Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
+Route::get('/folders/{id}/tasks', 'TaskController@index')->name('folders.create');
+
+//  フォルダ作成機能
+Route::get('/folders/create', 'FolderController@showCreateForm')->name('folders.create');
+//  フォルダ作成機能
+Route::post('/folders/create', 'FolderController@create');
