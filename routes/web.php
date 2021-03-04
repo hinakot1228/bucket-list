@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// タスク一覧機能（自分の判断で追記）
+// Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
+
 // フォルダ一覧表示機能
 Route::get('/folders/{id}/tasks', 'TaskController@index')->name('folders.create');
 
