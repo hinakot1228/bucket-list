@@ -24,4 +24,13 @@ class TaskController extends Controller
             'tasks' => $tasks,
         ]);
     }
+
+    // タスク作成ページの表示
+    public function createForm(int $id)
+    {
+        return view('tasks/create', [
+            'folder_id' => $id
+            // フォルダのIDを受け取る
+        ]);
+    }
 }

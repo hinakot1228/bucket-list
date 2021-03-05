@@ -23,7 +23,13 @@ use Illuminate\Support\Facades\Route;
 // フォルダ一覧表示機能
 Route::get('/folders/{id}/tasks', 'TaskController@index')->name('folders.create');
 
-//  フォルダ作成機能
+//  フォルダ作成ページの表示
 Route::get('/folders/create', 'FolderController@showCreateForm')->name('folders.create');
-//  フォルダ作成機能
+//  フォルダ作成処理の実行
 Route::post('/folders/create', 'FolderController@create');
+
+// タスク作成ページの表示
+Route::get('/folders/{id}/tasks/create', 'TaskController@createForm')->name('tasks.create');
+
+// タスク作成処理の実行
+Route::post('/folders/{id}/tasks/create', 'TaskController@create');
