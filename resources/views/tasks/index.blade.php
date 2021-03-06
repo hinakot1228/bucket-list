@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bucket List App</title>
+  @extends('layout')
+
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -14,6 +16,7 @@
   </nav>
 </header>
 <main>
+  @section('content')
   <div class="container">
     <div class="row">
       <div class="col col-md-4">
@@ -42,7 +45,7 @@
           <div class="panel-heading">タスク</div>
           <div class="panel-body">
             <div class="text-right">
-              <a href="#" class="btn btn-default btn-block">
+              <a href="{{ route('tasks.create', ['id' -> $current_folder_id]) }}" class="btn btn-default btn-block">
                 タスクを追加する
               </a>
             </div>
@@ -73,6 +76,7 @@
       </div>
     </div>
   </div>
+  @endsection
 </main>
 </body>
 </html>
